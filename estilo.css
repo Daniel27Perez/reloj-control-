@@ -1,0 +1,19 @@
+body {
+    background: url(imagenes/fondo.jpg)  ; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+  }
+
+  .img-1 {
+      background-image: url(imagenes/1.jpg);
+      background-size: cover;
+      background-position: center;
+  }
+
+  .img-2 {
+    background-image: url(imagenes/2.jpg);
+    background-size: cover;
+    background-position: center;
+}

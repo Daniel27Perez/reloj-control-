@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Registro</title>
+</head>
+<body>
+    <div style="text-align: center;"> 
+        <h1 class="mb-4" style="color: whitesmoke;"> Registrarte</h1>
+        <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-4 position-relative">
+              <label for="validationTooltip01"  class="form-label " style="color: chartreuse;">Nombre</label>
+              <br>
+              <input type="text" class="form-control" id="validationTooltip01" placeholder="Ingresa tu Nombre" value="" required>
+              <div class="valid-tooltip">
+                
+              </div>
+            </div>
+            <div class="col-md-4 position-relative">
+                <br>
+              <label for="validationTooltip02" class="form-label">Apellido</label>
+              <input type="text" class="form-control" id="validationTooltip02" placeholder="Ingresa tu Apellido" value="" required>
+              <div class="valid-tooltip">
+            </div>
+            <div class="col-md-4 position-relative ">
+                <label for="exampleInputEmail1" class="form-label font-weight-bold" style="color: rgb(197, 243, 197);">Email</label>
+                <input type="email" class="form-control" placeholder="Ingresa tu Email" id="exampleInputEmail1" aria-describedby="emailHelp" style="background-color: rgb(197, 243, 197); border: 0ch;">
+            </div>
+            <div class="col-md-4 position-relative">
+                <label for="exampleInputPassword1" class="form-label font-weight-bold" style="color: rgb(197, 243, 197);">Contraseña</label>
+                <input type="password" class="form-control mb-2"  placeholder="Ingresa tu contraseña"  id="exampleInputPassword1" style="background-color: rgb(197, 243, 197); border: 0ch;">
+            </div>
+            <div class="col-md-6 position-relative">
+              <label for="validationTooltip03" class="form-label">Ciudad</label>
+              <input type="text" class="form-control" id="validationTooltip03" required>
+              <div class="invalid-tooltip">
+                Porfavor, indique una ciudad valida.
+              </div>
+            </div>
+            </div>
+            <div class="col-md-3 position-relative">
+              <label for="validationTooltip05" class="form-label">Codigo Postal</label>
+              <input type="text" class="form-control" id="validationTooltip05" required>
+              <div class="invalid-tooltip">
+                Porfavor, indique Codigo Postal valido.
+              </div>
+            </div>
+            <div >
+                <a class="btn btn-primary" href="registro.html"  role="button" style="background-color: green; border: 0ch;" >Registrarse</a>
+            </div>
+          </form>
+    </div>
+    
+</body>
+</html>
+
