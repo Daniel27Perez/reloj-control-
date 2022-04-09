@@ -35,6 +35,7 @@ body {
   padding: 10px 30px;
   text-decoration: none;
   cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .nav-enlace:hover {
