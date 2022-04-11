@@ -9,6 +9,8 @@ body {
 .menu {
     color: rgb(197, 243, 197);
     text-align: center;
+    margin: 0.67rem;
+    padding-bottom: 30px;
   }
   
 .logo_menu {
@@ -41,6 +43,7 @@ nav {
   color:  rgb(197, 243, 197);
   font-size: 1.3rem;
   padding-bottom: 30px;
+  margin: 0.67rem;
 }
 .cerrar-sesion a {
   display: inline-block;
@@ -90,7 +93,41 @@ table{
   text-decoration: none;
 }
 
+#titulo-registro{
+  color: rgb(197, 243, 197);
+  padding-bottom: 40px;
+  text-align: center;
+  margin: 0.67rem;
+}
+form{
+  text-align: left;
+  color: rgb(197, 243, 197);
+  border: solid #efefef 1px;
+  margin: 30px 40px;
+  padding: 8px 4px;
+  width: 550px;
+  height: 100px;
+}
 
+form label{
+  display: inline-block;
+  background-color: #726f6f;
+  padding: 6px 4px;
+  border-radius: 0.7rem;
+  cursor: pointer;
+}
+
+#f-registro{
+  display: inline-block;
+  border-radius: 4px;
+  background: rgb(71, 173, 71);
+  color: white;
+  font-size: 1.2rem;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  margin: 30px 40px;  
+}
 
 
 
