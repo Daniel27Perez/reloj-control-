@@ -1,36 +1,102 @@
+body {
+  background: url(imagenes/fondo.jpg)  ; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  height: 100vh;
+}
+
 .menu {
     color: rgb(197, 243, 197);
     text-align: center;
   }
   
-  .logo_menu {
-    float: right;
-    width: 300px;
-  }
+.logo_menu {
+  float: right;
+  width: 300px;
+}
   
-  .nav-enlace {
-    display: inline-block;
-    background: #fff;
-    color: #000;
-    padding: 10px 30px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
+.nav-enlace {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  padding: 10px 30px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
   
-  .nav-enlace:hover {
-    color: blue;
-  }
+.nav-enlace:hover {
+  color: blue;
+}
   
-  nav {
-    background: #5a5a5a;
-    padding: 10px;
-    margin: 15px;
-    border-radius: 0.7rem;
-  }
-   
-  *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-  }
+nav {
+  background: #5a5a5a;
+  padding: 10px;
+  margin: 15px;
+  border-radius: 0.7rem;
+}
+  
+.cerrar-sesion p {
+  color:  rgb(197, 243, 197);
+  font-size: 1.3rem;
+  padding-bottom: 30px;
+}
+.cerrar-sesion a {
+  display: inline-block;
+  border-radius: 4px;
+  background: green;
+  color: white;
+  font-size: 1.2rem;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+}
+.cerrar-sesion img {
+  padding-top: 10px;
+}
+.cerrar-sesion{
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+#titulo-registro{
+  color: rgb(197, 243, 197);  
+  text-align: center;
+  padding-bottom: 7rem;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+.entradaSalida th, .entradaSalida td {
+  color: rgb(197, 243, 197);
+  border: solid white 2px;
+  padding: 5px;
+  text-align: center;
+}
+
+#f-entradaSalida a{
+  display: inline-block;
+  border-radius: 4px;
+  background: green;
+  color: white;
+  font-size: 1.2rem;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
