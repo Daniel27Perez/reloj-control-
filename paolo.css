@@ -33,7 +33,7 @@
       margin-bottom: 20px;
   }
   .correo:focus{
-      border-bottom: solid rgb(0, 89, 253) 1px;
+      border-bottom: solid rgb(0, 90, 253) 1px;
   }
   .form__button{
       display: flex;
