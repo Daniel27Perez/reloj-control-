@@ -1,5 +1,6 @@
 $("#formLogin").validate({
-    
+  errorClass: "my-error-class",
+  validClass: "my-valid-class",
     rules:{
       username: "required",
       password: "required"

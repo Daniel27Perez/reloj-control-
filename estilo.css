@@ -17,4 +17,9 @@ body {
     background-size: cover;
     background-position: center;
 }
-
+.my-error-class {
+  color:#FF0000;  
+}
+.my-valid-class {
+  color:black; 
+}

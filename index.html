@@ -10,7 +10,7 @@
 
     <title> Reloj Control</title>
   </head>
-  <body> 0
+  <body> 
     <section>
         <div class="row g-0">
             <div class="col-lg-7 d-none d-lg-block" >
@@ -33,24 +33,24 @@
                 <div class="px-lg-5 py-lg-4 p-4 w-100 align-self-center">
                     <h1 class="font-weight-bold mb-4 " style="color: rgb(197, 243, 197);" >Bienvenidos</h1>
 
-                    <form method="POST" id="formLogin">
+                    <form method="POST" id="formLogin" action="menu.html">
                       
                         <div class="mb-3">
-                          <label for="exampleInputEmail1" class="form-label font-weight-bold" style="color: rgb(197, 243, 197);">Email</label>
-                          <input type="email" class="form-control" placeholder="Ingresa tu Email" id="exampleInputEmail1" aria-describedby="emailHelp" style="background-color: rgb(197, 243, 197); border: 0ch;">
-                          <div id="emailHelp" class="form-text" style="color: red;">Nunca compartiremos tu correo electrónico.</div>
+                          <label for="txtusername" class="form-label font-weight-bold" style="color: rgb(197, 243, 197);">Nombre de Usuario:</label>
+                          <input type="text" name="username" placeholder="Ingresa tu nombre de usuario" class="form-control" id="txtusername" autofocus autocapitalize="none" autocomplete="username" maxlength="150" style="background-color: rgb(197, 243, 197); border: 0ch;">
                         </div>
                         <div class="mb-3">
-                          <label for="exampleInputPassword1" class="form-label font-weight-bold" style="color: rgb(197, 243, 197);">Contraseña</label>
-                          <input type="password" class="form-control mb-2"  placeholder="Ingresa tu contraseña"  id="exampleInputPassword1" style="background-color: rgb(197, 243, 197); border: 0ch;">
+                          <label for="idpassword" class="form-label font-weight-bold" style="color: rgb(197, 243, 197);">Contraseña:</label>
+                          <input type="password" name="password" id="txtpassword" class="form-control mb-2"  placeholder="Ingresa tu contraseña" autocomplete="current-password" style="background-color: rgb(197, 243, 197); border: 0ch;">
+                          <br>
                           <a href="RecuperarClave.html" id="passwordHelp" class="form-text text-decoration-none" style="color: red;">¿Has olvidado tu contraseña?</a>
                         </div>
                         <div class="text-center px-lg-5 pt-lg-4 pb-lg-3 p-4 mt-auto">
-                          <a  style="background-color: blue; border: 0ch;" class="btn btn-primary" href="menu.html" role="button">Inicio Sesión</a>
-                          <p style="color: rgb(197, 243, 197);">¿No tienes una cuenta? :) </p> 
+                          <input class="btn btn-primary" style="background-color: blue; border: 0ch;" role="button"  type="submit" value="Inicio Sesion" />
+                          <p style="color: rgb(197, 243, 197);">¿No tienes una cuenta? </p> 
                           <a  style="background-color: green; border: 0ch;" class="btn btn-primary" href="registro.html" role="button">Crear usuario</a>
                         </div>
-                      </form>
+                    </form>
                 </div>
 
             </div>
@@ -67,7 +67,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/localization/messages_es.min.js"></script>
-    <script src="js/validate_form.js"></script>
+    <script src="fomularioValidacion.js"></script>
     
   </body>
 </html>
