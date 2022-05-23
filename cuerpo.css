@@ -1,0 +1,13 @@
+body {
+    background: url(imagenes/gris.jpg)  ; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+  }
+  .my-error-class {
+    color:#FF0000;  
+  }
+  .my-valid-class {
+    color:black; 
+  }

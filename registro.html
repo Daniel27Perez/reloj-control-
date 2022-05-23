@@ -5,85 +5,71 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-  <link rel="stylesheet" href="estilo.css"> 
+  <link rel="stylesheet" href="cuerpo.css"> 
+  
 
   <title>registro</title>
 </head>
+<style>a {text-decoration: none; color: white;}  </style>
 <body >
   <br>
   <div class="container " >
-    <div style="border: rgb(197, 243, 197);" class="row border">
-        <h1 style="color: rgb(197, 243, 197)" >Registrarte</h1>
+    <div>
+        <h1 style="color: goldenrod" >Registrarte</h1>
+
+        <form method="POST" id="formRegistro" action="felicitaciones.html">
       <div class="row mb-3">
         <div class="col">
-          <label for="inputnombre" class="col-sm-2 col-form-label" style="color: rgb(197, 243, 197)" >Nombre</label>
-          <div class="col-lg-5">
-          <input type="text" id="imputnombre" class="form-control" placeholder="Nombre" aria-label="Nombre"  style="background-color: rgb(197, 243, 197); border: 0ch;">
-          </div>
+          <p>
+            <label style="color: white">Nombre de Usuario:</label>
+            <div class="col-lg-5">
+            <input type="text" name="username" id="txtusername" autofocus autocapitalize="none" autocomplete="username" maxlength="150" style="background-color: goldenrod; border: 0ch;">
+          </p>
+          
         </div>
-  
+      </div>
+      <div class="col-lg-12">
+        <p>
+        <label style="color: white"> Email</label>
+        <div class="col-lg-5"></div>
+        <input type="text" name="email" autocapitalize="none" autocomplete="email" autofocus style="background-color: goldenrod; border: 0ch;">
+      </p>
+      </div>
+      
+      <div class="col-lg-12">
+        <p>
+        <label style="color: white">Contraseña</label>
+        <div class="col-lg-5"></div>
+        <input type="password" name="password1" id="password1" autocomplete="new-password" style="background-color: goldenrod; border: 0ch;">
+        </p>
+        </div>
         <div class="col-lg-12">
-          <label for="inputapellido" class="col-sm-2 col-form-label" style="color: rgb(197, 243, 197)">Apellido</label>
-          <div class="col-lg-5">
-          <input type="text" id="imputapellido" class="form-control" placeholder="Apellido" aria-label="Apellido"  style="background-color: rgb(197, 243, 197); border: 0ch;">
-        </div>
-      </div>
-      <div class="col-lg-12">
-        <label for="inputEmail3" class="col-sm-2 col-form-label" style="color: rgb(197, 243, 197)">Email</label>
+        <p>
+        <label style="color: white">Re Contraseña</label>
         <div class="col-lg-5">
-          <input type="email" placeholder="Email" class="form-control" id="inputEmail3"  style="background-color: rgb(197, 243, 197); border: 0ch;">
+        <input type="password" name="password2" autocomplete="new-password" style="background-color: goldenrod; border: 0ch;">
+        </p>
         </div>
-      </div>
-      <div class="col-lg-12">
-        <label for="inputPassword3" class="col-sm-2 col-form-label" style="color: rgb(197, 243, 197)">Contraseña</label>
-        <div class="col-lg-5">
-          <input type="password" placeholder="Comtraseña" class="form-control" id="inputPassword3"  style="background-color: rgb(197, 243, 197); border: 0ch;">
-        </div>
-        <br>
-      </div>
-      <fieldset class="row mb-3"> 
-        <legend class="col-form-label col-sm-2 pt-0" style="color: rgb(197, 243, 197)">Sexo</legend>
-        <div class="col-lg-5">
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked  style="background-color: rgb(197, 243, 197); border: 0ch;">
-            <label class="form-check-label" for="gridRadios1" style="color: rgb(197, 243, 197)">
-              Masculino
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2"  style="background-color: rgb(197, 243, 197); border: 0ch;">
-            <label class="form-check-label" for="gridRadios2" style="color: rgb(197, 243, 197)">
-              Femenino
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3"  style="background-color: rgb(197, 243, 197); border: 0ch;">
-            <label class="form-check-label" for="gridRadios3" style="color: rgb(197, 243, 197)">
-              Otro
-              <input type="text"  style="background-color: rgb(197, 243, 197); border: 0ch;">
-            </label>
-          </div>
-        </div>
-      </fieldset>
-      <div class="row mb-3">
-        <div class="col-lg-5">
-          <div class="form-check">
+       
             <br>
-            <input class="form-check-input" type="checkbox" id="gridCheck1"  style="background-color: rgb(197, 243, 197); border: 0ch;">
-            <label class="form-check-label" for="gridCheck1" style="color: rgb(197, 243, 197)">
-              Aceptar terminos y condiciones
-            </label>
+            <input class="form-check-input" type="checkbox" id="condiciones" name="condiciones" style="background-color: goldenrod; border: 0ch;">
+            <label class="form-check-label" for="gridCheck1" name="condiciones" id="condiciones"  ><a href="condiciones.html">Aceptar terminos y condiciones</a></label>
           </div>
         </div>
       </div>
       <div class="col-lg-6">
-        <a type="submit" style="background-color: green; border: 0ch;" class="btn btn-primary" href="felicitaciones.html" >Registrarse</a>
+    
+        <input style="background-color: goldenrod; border: 1ch; color: white;" class="button" type="submit" value="Registrarse" />
+      </form>
       </div>
       
   
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/localization/messages_es.min.js"></script>
+      <script src="fomularioValidacion.js"></script>
     </div>
 
     </div>
