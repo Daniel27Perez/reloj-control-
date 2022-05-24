@@ -16,5 +16,33 @@
     <footer id="f-registro">
         <a href="menu.html">Menu Principal</a>
     </footer>
+    <br>
+    <br>
+</div>
+<hr>
+<table id="tblFeriados" style="color: white;">
+  <th>
+    <td>Día</td>
+    <td>Feriado</td>
+    <td>Extra</td>
+  </th>
+  
+</table>
+</div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+      $.get( "https://www.feriadosapp.com/api/holidays.json", function(data){
+        $.each(data.data, function(i, item){
+          $("#tblFeriados").append("<tr>"+
+                                    "<td>"+item.date+"</td>"+
+                                    "<td>"+item.title+"</td>"+
+                                    "<td>"+item.extra+"</td>"+
+                                  "</tr>");
+        });
+        console.log(data);
+      });
+
+      
+    </script>
 </body>
 </html>
