@@ -1,0 +1,35 @@
+body {
+    background: url(imagenes/gris.jpg)  ; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+  }
+
+  table{
+    width: 99%;
+    border-collapse: collapse;
+  }
+  .horario th, .horario td {
+    color: white;
+    border: solid white 2px;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  #f-horario a{
+    display: inline-block;
+    border-radius: 4px;
+    background: white;
+    color: white;
+    font-size: 1.2rem;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+  }
+  #titulo{
+    color: white;
+    padding-bottom: 40px;
+    text-align: center;
+    margin: 0.67rem;
+  }
