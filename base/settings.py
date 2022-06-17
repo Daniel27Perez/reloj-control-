@@ -25,13 +25,13 @@ SECRET_KEY = 'django-insecure-4)qhiiwym@n0y_r03^)hive-&$v0tsxlnno8-d8m74m0f5jrw$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
-INSTALLED_APPS = [
-    'django.contrib.admin',
+DJANGO_APPS = [
+     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -39,14 +39,32 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+CUSTOMER_APPS = [
+    'relojcontrol',
+    'api',
+]
+
+THIRD_PARTY_APPS = [
+    'rest_framework',
+    'corsheaders',
+    
+]
+
+INSTALLED_APPS = DJANGO_APPS + CUSTOMER_APPS + THIRD_PARTY_APPS;
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+CORS_ORIGIN_WHITELIST =[
+    'http://localhost:3000',
 ]
 
 ROOT_URLCONF = 'base.urls'
@@ -103,9 +121,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-cl'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Santiago'
 
 USE_I18N = True
 
