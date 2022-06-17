@@ -4,4 +4,3 @@ integrantes:
 Daniel Perez 
 Paolo Zuñiga
 Katherine Jerez
-Alejandro Leon
