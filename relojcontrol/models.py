@@ -4,4 +4,4 @@ from django.db import models
 # Create your models here.
 
 class Entrada(models.model):
-    titulo = models.CharField(verbose_name= 'Titulo', MAX_LENGTH = 100)
+    titulo = models.CharField(verbose_name= 'Entrada')
