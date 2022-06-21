@@ -1,1 +1,40 @@
-<b> hola mundo </b>
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrada</title>
+
+    <link rel="stylesheet" href="{% static 'css/entrada.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="volver">
+        <p><a href="sesion.html">VOLVER</a></p>
+        <i class="fa-solid fa-arrow-left-long"></i>
+    </div>
+    <div class="contenedor">
+        <p class="hora">
+            {% if entradas %}
+            {% for Entrada in entradas %}
+            <h1> {{Entrada.entrada}} </h1>
+            {% endfor %}
+            {% else %}
+            <h1> No hay registros </h1>
+            {% endif %}
+        </p>
+        <p class="txt">TU ENTRADA HA SIDO REGISTRADA CON ÉXITO</p>
+        <div class="login">
+            <h3><a href="index.html">CERRAR SESIÓN</a></h3>
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+    </div>
+</body>
+<script src="https://kit.fontawesome.com/2f8a153128.js" crossorigin="anonymous"></script>
+</html>

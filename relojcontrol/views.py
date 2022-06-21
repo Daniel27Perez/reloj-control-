@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from .models import Entrada
 
 # Create your views here.
 
 def ingreso(request):
-    return render(request, 'relojcontrol/ingreso.html', {})
+    entradas = Entrada.objects.all();
+    return render(request, 'relojcontrol/ingreso.html', {'entradas' : entradas})
