@@ -6,3 +6,5 @@ from .models import Entrada
 def ingreso(request):
     entradas = Entrada.objects.all();
     return render(request, 'relojcontrol/ingreso.html', {'entradas' : entradas})
+def login(request):
+    return render(request, 'relojcontrol/login.html', {})
