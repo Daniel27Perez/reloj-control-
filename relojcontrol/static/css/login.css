@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url("/static/imagenes/Recurso\ 1.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0;
+    font-family: 'Viga', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.formulario {
+    width: 290px;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 140px;
+    margin-left: 950px;
+    padding: 5px;
+}
+
+.form__titulo {
+    text-align: center;
+    margin-top: 0;
+    color: #252C59;
+}
+
+.form__input, .form__label, .form__submit {
+    display: block;
+    width: 100%;
+}
+
+.form__label {
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #252C59;
+}
+
+.form__input {
+    margin-bottom: 20px;
+    height: 40px;
+    border-radius: 10px;
+    border: 2.5px solid #D8D8D8;
+    padding: 10px;
+}
+
+.form__btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ingresar {
+    width: 120px;
+    height: 60px;
+    background-color: #252C59;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px 30px 30px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.limpiar {
+    width: 70px;
+    color: #F22727;
+    border: none;
+    font-size: 10px;
+    font-weight: bold;
+    background-color: transparent;
+    cursor: pointer;
+}
