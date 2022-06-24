@@ -1,7 +1,10 @@
+from email import message
+from pyexpat.errors import messages
 from django.shortcuts import redirect, render
 from .models import Entrada
 from .forms import CustomUserForm
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import authenticate, login
+from django.contrib import messages
 
 # Create your views here.
 
@@ -17,16 +20,15 @@ def registro(request):
         'form':CustomUserForm() 
     }
     if request.method == 'POST':
-        formulario = CustomUserForm(request.POST)
+        formulario = CustomUserForm(data=request.POST)
         if formulario.is_valid():
             formulario.save()
             #redireccionar a pagina principal
-            username = formulario.cleaned_data['username']
-            password = formulario.cleaned_data['password']
-            user = authenticate(username=username, password=password)
+            user = authenticate(username= formulario.cleaned_data["username"], password= formulario.cleaned_data["password1"])
             login(request, user)
-            return redirect(to = 'home')
-            
+            messages.success(request, "Te has registrado correctamente")
+            return redirect(to='home')
+        data['form'] = formulario    
     return render(request, 'registration/registro.html', data)
 
 
