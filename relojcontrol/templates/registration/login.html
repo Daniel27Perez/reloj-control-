@@ -39,41 +39,13 @@
           autocomplete="current-password">
         <input type="submit" class="btn form__submit ingresar" value="Ingresar">
         
-        <a href="RecuperarClave.html" id="passwordHelp" class="form-text text-decoration-none" style="color: red;"
-          data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@gmail.com">¿Has olvidado tu
-          contraseña?</a>
+        <a href="{% url 'reset_password' %}"  class="form-text text-decoration-none" style="color: red;">¿Has olvidado tu contraseña?</a>
         <br>
         <br>
         <p style="color: black">¿No tienes una cuenta? </p>
         <a style="background-color: green" role="button" class="btn form__submit ingresar" href="{% url 'registro' %}">&nbsp Crear
           &nbsp&nbsp&nbsp&nbsp Usuario &nbsp</a>
 
-        <div>
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Recuperar Contraseña</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <form method="POST" id="formRegistro" action="index.html">
-                    <div class="mb-3">
-                      <label class="form-label">Correo Electronico</label>
-                      <input type="text" name="email" autocapitalize="none" autocomplete="email" autofocus
-                        class="form__input">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                  <input class="btn btn-primary" type="submit" value="Enviar" />
-
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
       </form>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
       integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
