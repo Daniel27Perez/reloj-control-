@@ -14,7 +14,6 @@ from audioop import reverse
 from importlib.util import LazyLoader
 from pathlib import Path
 import os
-
 from django.urls import reverse_lazy 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.

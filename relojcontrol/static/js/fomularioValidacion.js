@@ -35,7 +35,9 @@ $("#formRegistro").validate({
       minlength: 10,
       equalTo: "#password1"
     },
-    condiciones: "required"
+
+    last_name: "required",
+    first_name: "required"
   },
   messages: {
     username: {
@@ -43,10 +45,9 @@ $("#formRegistro").validate({
       maxlength: "Maximo de 20 caracteres"
     },
     password1: {
-      minlength: "Minimo de 10 caracteres" 
+      minlength: "Minimo de 8 caracteres" 
     },
-    password2 :{
-      minlength: "Minimo de 10 caracteres"  
-    },
+    password2 :"Repetir contraseña anterior"
+
   }
 });

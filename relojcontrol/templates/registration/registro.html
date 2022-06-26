@@ -22,70 +22,43 @@
     <form method="POST" id="formRegistro" class="formulario">
         {% csrf_token %}
     <h1 class="form__titulo" >Registro de usuario</h1>
-        <table>
-            {{ form.as_table }}
 
-        </table>
-
-       <input type="submit" value="registrar"> 
-    </form>
-</body>
-{% endblock %}
-</html>
-
-<!--form method="POST" id="formRegistro" action="index.html" class="formulario">
-    <h1 class="form__titulo" >Registrarte</h1>
+    <label class="form-label">Nombre:</label>
+    <input type="text" class="form__input" name="first_name" id="first_name" autofocus autocapitalize="none" autocomplete="first_name" maxlength="150">
+      
+    <label class="form-label">Apellido:</label>
+    <input type="text" class="form__input" name="last_name" id="last_name" autofocus autocapitalize="none" autocomplete="last_name" maxlength="150">
 
     <label class="form-label">Nombre de Usuario:</label>
     <input type="text" class="form__input" name="username" id="txtusername" autofocus autocapitalize="none" autocomplete="username" maxlength="150">
-
-  
-
+    
     <label class="form-label"> Email</label>
     <input type="text" name="email" autocapitalize="none" autocomplete="email" autofocus class="form__input">
-      
-
+          
     <br>
     <label class="form-label">Contraseña</label>
     <input type="password" name="password1" id="password1" autocomplete="new-password" class="form__input">
-
-
-
+    
     <label class="form-label">Re Contraseña</label>
     <input type="password" name="password2" autocomplete="new-password" class="form__input">
 
-
-    <br>
-    <input class="form-check-input" type="checkbox" id="condiciones" name="condiciones" style="background-color: goldenrod; border: 0ch;">
-    <label class="form-check-label" for="gridCheck1" name="condiciones" id="condiciones"  ><a href="condiciones.html" data-bs-toggle="modal" data-bs-target="#exampleModal">Aceptar terminos y condiciones</a></label>
- 
-    <input style="background-color: goldenrod; border: 1ch;" class="btn btn-primary" type="submit" value="Registrarse" />
-    <br>
-    <br>
-    <a style="background-color: green" role="button" class="btn btn-primary" href="index.html">Volver</a>
-</form>
-<div> 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Terminos y Condiciones</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          Si aceptas los terminos y condiciones, venderemos tus datos :)
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>   
+    <input type="submit" value="registrar"> 
+    </form>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/localization/messages_es.min.js"></script>
-<script src="fomularioValidacion.js"></script>
+<script src="{% static 'js\fomularioValidacion.js' %}"></script>
+</body>
+{% endblock %}
+</html>
+
+
+
+
+    
+
+
+

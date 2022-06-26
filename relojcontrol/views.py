@@ -8,7 +8,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from .serializers import HorarioSerializers
 from rest_framework import viewsets
-from rest_framework.response import Response
+from django.views.generic import TemplateView
 
 # Create your views here.
 
@@ -18,6 +18,9 @@ def ingreso(request):
 
 def home(request):
     return render(request, 'relojcontrol/home.html')
+def ejemplo(request):
+    return render(request, 'relojcontrol/ejemplo.html')
+
 
 def registro(request):
     data = {
@@ -38,6 +41,12 @@ def registro(request):
 class HorarioView(viewsets.ModelViewSet):
     serializer_class = HorarioSerializers
     queryset = Horario.objects.all();
+    
+
+class getCalendar(TemplateView):
+    template_name = 'relojcontrol/calendar.html'
+    def get_context_data(self, *args, **kwargs):
+        pass
         
         
 
