@@ -48,7 +48,8 @@ DJANGO_APPS = [
 
 CUSTOMER_APPS = [
     'relojcontrol.apps.RelojcontrolConfig',
-    'api',
+    
+    
 ]
 
 THIRD_PARTY_APPS = [

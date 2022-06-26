@@ -1,10 +1,14 @@
 from email import message
 from pyexpat.errors import messages
+from django import views
 from django.shortcuts import redirect, render
-from .models import Entrada
+from .models import Entrada, Horario
 from .forms import CustomUserForm
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
+from .serializers import HorarioSerializers
+from rest_framework import viewsets
+from rest_framework.response import Response
 
 # Create your views here.
 
@@ -30,6 +34,12 @@ def registro(request):
             return redirect(to='home')
         data['form'] = formulario    
     return render(request, 'registration/registro.html', data)
+
+class HorarioView(viewsets.ModelViewSet):
+    serializer_class = HorarioSerializers
+    queryset = Horario.objects.all();
+        
+        
 
 
 
