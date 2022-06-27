@@ -1,6 +1,7 @@
-from email import message
+from django.core.mail import send_mail
 from pyexpat.errors import messages
 from django import views
+from django.conf import settings
 from django.shortcuts import redirect, render
 from .models import Entrada, Horario
 from .forms import CustomUserForm
@@ -41,6 +42,19 @@ def registro(request):
 class HorarioView(viewsets.ModelViewSet):
     serializer_class = HorarioSerializers
     queryset = Horario.objects.all();
+    
+def Reporte(request):
+    if request.method == "POST":
+        subject = request.POST["asunto"]
+        message = request.POST["mensaje"] + " " + request.POST["email"]
+        email_from = settings.EMAIL_HOST_USER
+        recipient_list = ["danielignacio2178@gmail.com"]
+        send_mail(subject, message, email_from, recipient_list)
+        messages.success(request, "Reporte enviado correctamente")
+        return redirect(to='home')
+    return render(request, "relojcontrol/reporte.html" )
+        
+          
     
 
 class getCalendar(TemplateView):
