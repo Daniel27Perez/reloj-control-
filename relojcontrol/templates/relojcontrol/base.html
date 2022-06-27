@@ -33,16 +33,16 @@
           <p>{{ user.username|upper }}</p>
           <div class="entrada">
               <div class="subtitulo">Entrada</div>
-              <button class="flecha verde"><a href="{% url 'ingreso' %}" class="nav-link {% block ingreso-a %}{% endblock %}"><i class="fa-solid fa-play"></i></a></button>
+              <button class="flecha verde"><a href="{% url 'ingreso' %}" class="nav-link"><i class="fa-solid fa-play nav-link"></i></a></button>
           </div>
           <div class="entrada">
             <div class="subtitulo">Colacion</div>
-            <button class="flechaa verde" onclick="alert('Inicio de Colación');"><b class="fa-solid fa-play"></b></button>
-            <button class="flechaa naran" onclick="alert('Termino de Colación');"><b class="fa-solid fa-play"></b></button>
+            <button class="flechaa verde" onclick="alert('Inicio de Colación');"><b class="fa-solid fa-play nav-link"></b></button>
+            <button class="flechaa naran" onclick="alert('Termino de Colación');"><b class="fa-solid fa-play nav-link"></b></button>
           </div>
           <div class="salida">
               <div class="subtitulo">Salida</div>
-              <button class="flecha naran"><a href="salida.html"><i class="fa-solid fa-play"></i></a></button>
+              <button class="flecha naran"><a href="{% url 'salida' %}" class="nav-link"><i class="fa-solid fa-play nav-link"></i></a></button>
   
           </div>
           <a href="{% url 'reporte' %}" style="background-color: #252C59; border: 0ch;" class="btn btn-primary" >Generar Reporte</a>
