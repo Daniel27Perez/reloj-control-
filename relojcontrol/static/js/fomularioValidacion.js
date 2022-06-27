@@ -37,7 +37,9 @@ $("#formRegistro").validate({
     },
 
     last_name: "required",
-    first_name: "required"
+    first_name: "required",
+    asunto: "required",
+    mensaje: "required"
   },
   messages: {
     username: {
@@ -51,3 +53,4 @@ $("#formRegistro").validate({
 
   }
 });
+
