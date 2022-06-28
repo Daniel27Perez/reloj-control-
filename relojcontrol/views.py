@@ -1,7 +1,6 @@
 from datetime import datetime
 from django.core.mail import send_mail
 from pyexpat.errors import messages
-from django import views
 from django.conf import settings
 from django.shortcuts import redirect, render
 from .models import Horario
@@ -10,7 +9,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from .serializers import HorarioSerializers
 from rest_framework import viewsets
-from django.views.generic import TemplateView
+
 
 # Create your views here.
 
@@ -59,17 +58,10 @@ def Reporte(request):
         return redirect(to='home')
     return render(request, "relojcontrol/reporte.html" )
         
-          
-    
+def Calendario(request):
+    return render(request, 'relojcontrol/calendar.html')
 
-class getCalendar(TemplateView):
-    template_name = 'relojcontrol/calendar.html'
-    def get_context_data(self, *args, **kwargs):
-        pass
-    
-
-def Salida(request):
-    salidas = datetime.now();
-    return render(request, 'relojcontrol/salida.html', {'salidas' : salidas})
+def Asistencia(request):
+    return render(request, 'relojcontrol/asistencia.html')
 
 

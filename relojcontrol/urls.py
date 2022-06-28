@@ -1,6 +1,5 @@
-from django.urls import URLPattern, path, re_path
+from django.urls import path, re_path
 from . import views
-from relojcontrol.views import getCalendar
 from django.contrib.auth import views as auth_views
 from django.contrib.auth.views import LoginView, logout_then_login, PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView
 
@@ -13,13 +12,12 @@ urlpatterns = [
     path('reporte', views.Reporte, name='reporte'),
     path('salida', views.Salida, name='salida'),
     path('feriados', views.Feriados, name='feriados'),
+    path('calendar', views.Calendario, name='calendar'),
+    path('asistencia', views.Asistencia, name='asistencia'),
     
+ 
     
-    path('', getCalendar.as_view(template_name='calendar.html'), name='calendar View'),
-    
-   
-    
-    
+
     
     path('reset_password/', auth_views.PasswordResetView.as_view(template_name='registration/password_reset.html'),name="reset_password"),
     path('password_reset_sent', auth_views.PasswordResetDoneView.as_view(template_name='registration/password_reset_sent.html'),name="password_reset_done"),
