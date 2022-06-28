@@ -12,11 +12,12 @@ urlpatterns = [
     path('registro/', views.registro, name='registro'),
     path('reporte', views.Reporte, name='reporte'),
     path('salida', views.Salida, name='salida'),
+    path('feriados', views.Feriados, name='feriados'),
     
     
     path('', getCalendar.as_view(template_name='calendar.html'), name='calendar View'),
     
-    path('ejemplo', views.ejemplo, name='ejemplo'),
+   
     
     
     

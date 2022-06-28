@@ -24,8 +24,8 @@ def Salida(request):
 
 def home(request):
     return render(request, 'relojcontrol/home.html')
-def ejemplo(request):
-    return render(request, 'relojcontrol/ejemplo.html')
+def Feriados(request):
+    return render(request, 'relojcontrol/feriados.html')
 
 
 def registro(request):
