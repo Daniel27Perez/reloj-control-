@@ -59,7 +59,8 @@ def Reporte(request):
     return render(request, "relojcontrol/reporte.html" )
         
 def Calendario(request):
-    return render(request, 'relojcontrol/calendar.html')
+    horarios = Horario.objects.all();
+    return render(request, 'relojcontrol/calendar.html', {'horarios': horarios})
 
 def Asistencia(request):
     return render(request, 'relojcontrol/asistencia.html')
