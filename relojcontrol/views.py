@@ -71,8 +71,5 @@ class getCalendar(TemplateView):
 def Salida(request):
     salidas = datetime.now();
     return render(request, 'relojcontrol/salida.html', {'salidas' : salidas})
-        
-        
-
 
 
