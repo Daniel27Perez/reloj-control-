@@ -12,7 +12,7 @@ from .serializers import HorarioSerializers
 from rest_framework import viewsets
 from django.views.generic import TemplateView
 
-# Create your views here.
+# Create you views here.
 
 def ingreso(request):
     entradas = datetime.now(); 
