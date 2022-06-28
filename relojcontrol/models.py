@@ -19,5 +19,5 @@ class Horario(models.Model):
     viernesS = models.TimeField( ("Viernes Salida") )
     
 
-def __str__(self):
+def __str__( self ):
     return self.nombreHorario
