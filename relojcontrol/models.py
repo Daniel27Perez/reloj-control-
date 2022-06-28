@@ -3,7 +3,7 @@ from pickle import FALSE, TRUE
 from unittest.util import _MAX_LENGTH
 from django.db import models
 
-# Creat your models here.
+# Create your models here.
 
 class Horario(models.Model):
     nombreHorario = models.CharField(verbose_name='Horario', max_length=100)
