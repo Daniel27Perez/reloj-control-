@@ -28,3 +28,12 @@ class Control(models.Model):
     
     def __str__(self):
         return self.titulo
+    
+class ControlSalida(models.Model):
+    titulo = models.CharField(max_length=500, default='Salida', editable=False)
+    usuario = models.ForeignKey(User, default=User , on_delete=models.DO_NOTHING, verbose_name='Usuario')
+    fecha = models.DateTimeField(default=datetime.now)
+    
+    def __str__(self):
+        return self.titulo
+

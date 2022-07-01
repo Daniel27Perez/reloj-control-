@@ -5,6 +5,7 @@ from django.contrib.auth.views import LoginView, logout_then_login, PasswordRese
 
 urlpatterns = [
     path('ingreso', views.ingreso, name= 'ingreso'),
+    path('salida', views.Termino, name= 'salida'),
     path('home',views.home, name='home'),
     path('', LoginView.as_view(template_name='registration/login.html'), name="login"),
     path('logout', logout_then_login, name='logout'),
@@ -14,10 +15,7 @@ urlpatterns = [
     path('calendar', views.Calendario, name='calendar'),
     path('asistencia', views.Asistencia, name='asistencia'),
     
- 
-    
 
-    
     path('reset_password/', auth_views.PasswordResetView.as_view(template_name='registration/password_reset.html'),name="reset_password"),
     path('password_reset_sent', auth_views.PasswordResetDoneView.as_view(template_name='registration/password_reset_sent.html'),name="password_reset_done"),
     re_path('reset/(?P<uidb64>[0-9A-za-z_\-]+)/(?P<token>.+)/$', auth_views.PasswordResetConfirmView.as_view(template_name='registration/password_reset_confirms.html'), name = "password_reset_confirm"),

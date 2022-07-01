@@ -1,5 +1,7 @@
-
 {% load static %}
+
+{% block ingreso-a %}{% endblock %}
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrada</title>
+    <title>Salida</title>
 
     <link rel="stylesheet" href="{% static 'css/entrada.css' %}">
 
@@ -18,21 +20,27 @@
 </head>
 
 <body>
-    <form method="post">
+    <form action="" method="POST" enctype="multipart/form-data" >
     {% csrf_token %}
         <div class="volver">
             <p><a href="{% url 'home' %}">VOLVER</a></p>
             <i class="fa-solid fa-arrow-left-long"></i>
         </div>
         <div class="contenedor">
-            <p class="hora">
-            <h2> {{salidas}} </h2>
-            </p>
-            <p class="txt">TU SALIDA HA SIDO REGISTRADA CON ÉXITO</p>
-            <div class="login">
-                <h3><a href="{% url 'login' %}">CERRAR SESIÓN</a></h3>
-                <i class="fa-solid fa-right-from-bracket"></i>
-            </div>
+            
+            <br><br><br>
+            <h1> Registrar Salida </h1>
+                
+                <br>
+                {{formu}}
+                <br>
+                <br>
+                
+
+            <input type="button" value="Actualizar" onclick="location.reload()" style="background-color: orange; color:aliceblue;" />
+            <input type="submit" class="btn btn-primary" value="Confirmar" style="background-color: green; color:aliceblue; width:150px;">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            
         </div>
     </form>
 </body>
