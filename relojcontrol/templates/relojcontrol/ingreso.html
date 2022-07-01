@@ -1,6 +1,7 @@
-
-
 {% load static %}
+
+{% block ingreso-a %}{% endblock %}
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,21 +20,24 @@
 </head>
 
 <body>
-    <form method="post">
+    <form action="" method="POST" enctype="multipart/form-data" >
     {% csrf_token %}
         <div class="volver">
             <p><a href="{% url 'home' %}">VOLVER</a></p>
             <i class="fa-solid fa-arrow-left-long"></i>
         </div>
         <div class="contenedor">
-            <p class="hora">
-                <h2> {{entradas}} </h2>
-            </p>
-            <p class="txt">TU ENTRADA HA SIDO REGISTRADA CON ÉXITO</p>
-            <div class="login">
-                <h3><a href="{% url 'login' %}">CERRAR SESIÓN</a></h3>
-                <i class="fa-solid fa-right-from-bracket"></i>
-            </div>
+                
+                <br><br><br><br>
+                {{form}}
+                <br>
+                <br>
+                
+
+            <input type="button" value="Actualizar" onclick="location.reload()" style="background-color: orange; color:aliceblue;" />
+            <input type="submit" class="btn btn-primary" value="Confirmar" style="background-color: green; color:aliceblue; width:150px;">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            
         </div>
     </form>
 </body>

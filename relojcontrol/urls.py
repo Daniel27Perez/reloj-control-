@@ -10,7 +10,6 @@ urlpatterns = [
     path('logout', logout_then_login, name='logout'),
     path('registro/', views.registro, name='registro'),
     path('reporte', views.Reporte, name='reporte'),
-    path('salida', views.Salida, name='salida'),
     path('feriados', views.Feriados, name='feriados'),
     path('calendar', views.Calendario, name='calendar'),
     path('asistencia', views.Asistencia, name='asistencia'),

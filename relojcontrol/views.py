@@ -4,22 +4,17 @@ from pyexpat.errors import messages
 from django.conf import settings
 from django.shortcuts import redirect, render
 from .models import Horario
-from .forms import CustomUserForm
+from .forms import CustomUserForm, FormularioEntrada
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from .serializers import HorarioSerializers
 from rest_framework import viewsets
 
 
+
 # Create your views here.
 
-def ingreso(request):
-    entradas = datetime.now(); 
-    return render(request, 'relojcontrol/ingreso.html', {'entradas' : entradas})
 
-def Salida(request):
-    salidas = datetime.now();
-    return render(request, 'relojcontrol/salida.html', {'salidas' : salidas})
 
 def home(request):
     return render(request, 'relojcontrol/home.html')
@@ -65,3 +60,14 @@ def Asistencia(request):
     return render(request, 'relojcontrol/asistencia.html')
 
 
+def ingreso(request):
+    if request.method == 'POST':
+        form = FormularioEntrada(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "ingreso exitoso")
+            return redirect(to='home')
+    else:
+        form = FormularioEntrada()  
+             
+    return render(request, 'relojcontrol/ingreso.html', {'form':form})

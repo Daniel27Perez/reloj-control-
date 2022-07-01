@@ -1,7 +1,6 @@
 from datetime import datetime
-from pickle import FALSE, TRUE
-from unittest.util import _MAX_LENGTH
 from django.db import models
+from django.contrib.auth.models import User 
 
 # Create your models here.
 
@@ -21,3 +20,11 @@ class Horario(models.Model):
 
 def __str__(self):
     return self.nombreHorario
+
+class Control(models.Model):
+    titulo = models.CharField(max_length=500, default='Entrada', editable=False)
+    usuario = models.ForeignKey(User, default=User , on_delete=models.DO_NOTHING, verbose_name='Usuario')
+    fecha = models.DateTimeField(default=datetime.now)
+    
+    def __str__(self):
+        return self.titulo
