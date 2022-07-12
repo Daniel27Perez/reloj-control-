@@ -3,11 +3,11 @@ from django.core.mail import send_mail
 from pyexpat.errors import messages
 from django.conf import settings
 from django.shortcuts import redirect, render
-from .models import Horario
+from .models import Horario, Control, ControlSalida
 from .forms import CustomUserForm, FormularioEntrada, FormularioSalida
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
-from .serializers import HorarioSerializers
+from .serializers import HorarioSerializers, ControlSerializers, ControlSalidaSerializers
 from rest_framework import viewsets
 
 
@@ -82,3 +82,11 @@ def Termino(request):
         formu = FormularioSalida()  
              
     return render(request, 'relojcontrol/salida.html', {'formu':formu })
+
+class ControlView(viewsets.ModelViewSet):
+    serializer_class = ControlSerializers
+    queryset = Control.objects.all();
+    
+class ControlSalidaView(viewsets.ModelViewSet):
+    serializer_class = ControlSalidaSerializers
+    queryset = ControlSalida.objects.all();

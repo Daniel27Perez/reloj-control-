@@ -21,6 +21,8 @@ from relojcontrol import views
 
 router = routers.DefaultRouter()
 router.register(r'Horario',views.HorarioView)
+router.register(r'Control',views.ControlView)
+router.register(r'ControlSalida',views.ControlSalidaView)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
