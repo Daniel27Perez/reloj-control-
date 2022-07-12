@@ -1,5 +1,3 @@
-
-
 {% load static %}
 
 <!DOCTYPE html>
@@ -12,40 +10,46 @@
   <title>base</title>
 
   <link rel="stylesheet" href="{% static 'css/login.css' %}">
-
+  <link rel="icon" href="../../static/imagenes/icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.rtl.min.css"
-    integrity="sha384-dc2NSrAXbAkjrdm9IYrX10fQq9SDG6Vjz7nQVKdKcJl3pC+k37e7qJR5MVSCS+wR" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 
 {% block content %}
+
 <body>
-    <form method="POST" id="formRegistro" class="formulario">
-            {% csrf_token %}
-        <h1 class="form__titulo" >Reporte de llegada</h1>
-    
+  <div class="row fichaE" style="margin-top: 15%;">
+    <div class="col-sm-7"></div>
+    <div class="col-sm-4 ">
+      <form method="POST" id="formRegistro">
+        {% csrf_token %}
+        <h1>Reporte de llegada</h1>
+
         <label class="form-label">asunto:</label>
-        <input required type="text" class="form__input" name="asunto" id="asunto" autofocus autocapitalize="none" autocomplete="asunto" maxlength="150">
-          
+        <input required type="text" class="form__input" name="asunto" id="asunto" autofocus autocapitalize="none"
+          autocomplete="asunto" maxlength="150">
+
         <label class="form-label">Email</label>
         <input type="email" name="email" autocapitalize="none" autocomplete="email" autofocus class="form__input">
 
         <label for="message-text" class="col-form-label">Observaciones:</label>
         <textarea required class="form-control" name="mensaje" id="mensaje" autocomplete="mensaje" autofocus></textarea>
-         <br>
+        <br>
 
-        <a type="button" href="{% url 'home' %}" class="btn btn-secondary">Cerrar</a> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-        <input type="submit" class= "btn btn-primary" value="Enviar"> 
-    </form>
-        
-  
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
-      <script src="{% static 'js\fomularioValidacion.js' %}"></script>
-  </body>
-  {% endblock %}
-  <script src="https://kit.fontawesome.com/2f8a153128.js" crossorigin="anonymous"></script>
-  
+        <a type="button" href="{% url 'home' %}" class="btn btn-warning esp" >Volver</a>
+        <input type="submit" class="btn btn-primary" value="Enviar">
+      </form>
+
+    </div>
+    <div class="col-sm-1"></div>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+  <script src="{% static 'js\fomularioValidacion.js' %}"></script>
+</body>
+{% endblock %}
+<script src="https://kit.fontawesome.com/2f8a153128.js" crossorigin="anonymous"></script>

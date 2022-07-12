@@ -76,7 +76,7 @@ def Termino(request):
         formu = FormularioSalida(request.POST)
         if formu.is_valid():
             formu.save()
-            messages.success(request, "Salida exitoso")
+            messages.success(request, "Salida exitosa")
             return redirect(to='home')
     else:
         formu = FormularioSalida()  

@@ -8,3 +8,42 @@ body {
     font-family: 'Viga', sans-serif;
     
 }
+
+.tableado{
+    padding: 2%;
+    background-color: #0c4ae37d;
+    color: white;
+    margin-top: 5%;
+    border-radius: 4%;
+}
+th,
+td {
+    background-color: #252C59;
+    border: solid 1px;
+    color: white;
+}
+
+
+@media (max-width: 600px) {
+    th,
+    td {
+        font-size: 10px;
+        border: solid 1px;
+    }
+
+
+    .tableado{
+        padding: 0%;
+        background-color: #0c4ae37d;
+        color: white;
+        margin-top: 0%;
+        border-radius: 4%;
+
+    }
+    table{
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}

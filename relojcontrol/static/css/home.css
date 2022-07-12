@@ -11,6 +11,47 @@ body {
     margin: 0;
     font-family: 'Viga', sans-serif;
 }
+.boton {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 28px;
+    padding: 5px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.boton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.boton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.boton:hover span {
+    padding-right: 25px;
+}
+
+.boton:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
 
 a {
     text-decoration: none;
@@ -22,6 +63,20 @@ p {
     color: #808080;
 }
 
+form{
+    margin-top: 0%;
+    width: 50%;
+    margin-left: 20%;
+    padding: 5%;
+}
+@media (max-width: 600px) {
+    form{
+        margin-top: 5%;
+        width: 100%;
+        margin-left: 5%;
+        padding: 12%;
+    }
+}
 .login {
     display: flex;
     align-items: center;
@@ -102,9 +157,15 @@ p {
     height: 80px;
     border: none;
     border-radius: 20px;
+    align-items: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    
 }
+
 .flechaa {
-    width: 60px;
+    width: 75px;
     height: 80px;
     border: none;
     border-radius: 20px;
