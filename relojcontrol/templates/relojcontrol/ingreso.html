@@ -10,44 +10,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrada</title>
+    <title>entrada</title>
 
     <link rel="stylesheet" href="{% static 'css/entrada.css' %}">
-    <link rel="icon" href="../../static/imagenes/icon.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
-    <div class="fichaE" style="margin-top: 10%;">
-        <form action="" method="POST" enctype="multipart/form-data">
-
-            <div>
-                {% csrf_token %}
-
-                <br><br><br>
-                <h1> Registrar Entrada </h1>
-
+    <form action="" method="POST" enctype="multipart/form-data" >
+    {% csrf_token %}
+        <div class="volver">
+            <p><a href="{% url 'home' %}">VOLVER</a></p>
+            <i class="fa-solid fa-arrow-left-long"></i>
+        </div>
+        <div class="contenedor">
+            
+            <br><br><br>
+            <h1> Registrar Entrada </h1>
+                
                 <br>
                 {{form}}
                 <br>
                 <br>
+                
 
-
-                <button class="boton" type="button" value="Actualizar" onclick="location.reload()"
-                    style="background-color: orange; color:aliceblue;" style="vertical-align:middle">
-                    <span><i class="fa fa-refresh" aria-hidden="true"></i>Actualizar</span></button>
-                <button class="boton" style="vertical-align:middle" type="submit" value="Confirmar">
-                    <span>Ingreso</span></button>
-
-                <br><br> <a type="button" href="{% url 'home' %}" class="boton"
-                    style="vertical-align:middle; background-color: goldenrod;">Volver</a>
-
-            </div>
-        </form>
-    </div>
+            <input type="button" value="Actualizar" onclick="location.reload()" style="background-color: orange; color:aliceblue;" />
+            <input type="submit" class="btn btn-primary" value="Confirmar" style="background-color: green; color:aliceblue; width:150px;">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            
+        </div>
+    </form>
 </body>
 <script src="https://kit.fontawesome.com/2f8a153128.js" crossorigin="anonymous"></script>
 
